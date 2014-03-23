@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	//* listen for enter
+	//* listen for enter March 22
 		//* append the item to the_list
 	$("itemtyped").keyup(function(event){
 		if (event.which===13){
