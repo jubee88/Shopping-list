@@ -58,3 +58,6 @@ footer {
 	padding-right: 30px;
 }
 
+.item {
+	display: none;
+}
