@@ -1,18 +1,24 @@
+//listen for click/enter button
 $(document).ready(function() {
-	//* listen
-		$("#itemtyped").keyup(function(event) {
-	event.preventDefault();
-		if (event.which === 13) {
-			$("#itemtyped").trigger(additem);
+	$("#in").focus();
+	$("#add").on("click", function() {
+		add_data();
+	});
+
+	$("#in").keypress(function(event){
+		if(event.which === 13) {
+			add_data();
 		}
-});
-	var additem = function () {
-		var currentitem = $("#itemtyped").val();
-		var newlistitem = $("<ul id="actuallist"><input type="checkbox">"+currentitem+"</ul>");
-		$(".item").show();
-		$(".item").append(newlistitem);
-		$("#itemtyped").text(" ");
-		$("input").val("");
+	});
+//add the function add_data
+function add_data()	{
+	if($.trim($("#in").val()) =="") {
+		alert("please type in an item");
+		$("#in").val().focus();
+	}
+	else {
+		$("#thelist").append("<li>"+$("#in").val()+"</li>");
+		$("#in").val("");
+		$("#in").focus();
+	}
 };
-});
-	//* remove the list item

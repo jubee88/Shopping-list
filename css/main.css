@@ -1,6 +1,6 @@
 .main {
 	background-color: #81DAF5;
-	color: white;
+	color: red;
 	font-family: Verdana;
 	font-size: 20px;
 	border-top-right-radius: 50px 60px;
@@ -39,12 +39,7 @@ input {
 	margin-left: auto;
 	margin-top: -50px;
 	font-size: 70%;
-	color: #BDBDBD;
-}
-
-input:focus, input:hover {
-	background-color: #FBFB9B;
-	color: black;
+	color: red;
 }
 
 footer {
@@ -58,6 +53,11 @@ footer {
 	padding-right: 30px;
 }
 
-.item {
-	display: none;
+#thelist {
+	list-style: decimal;
+}
+
+li {
+	font-size: 25px;
+	color: green;
 }
